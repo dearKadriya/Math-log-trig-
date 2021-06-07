@@ -17,7 +17,6 @@ test.each([
   },
 );
 
-
 test.each([
   [100, 1, 100],
   [100, 2, 85],
@@ -33,7 +32,7 @@ test.each([
     const result = demon.getStoned();
     expect(expected).toBe(result);
   },
-)
+);
 
 test.each([
   [100, 1, 100],
