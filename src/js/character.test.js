@@ -6,13 +6,13 @@ test.each([
   [100, 3, 80],
   [100, 4, 70],
   [100, 5, 60],
-  [100, 6, 100],
+  [100, 6, 50],
 ])(
   ('Проверка вычисления атаки при разной дистанции'),
   (attack, distance, expected) => {
-    const demon = new Daemon();
-    demon.setAttack(attack, distance);
-    const result = demon.getAttack();
+    const demon = new Daemon(distance);
+    demon.Attack = attack;
+    const result = demon.Attack;
     expect(expected).toBe(result);
   },
 );
@@ -20,16 +20,16 @@ test.each([
 test.each([
   [100, 1, 100],
   [100, 2, 85],
-  [100, 3, 72.1],
+  [100, 3, 72],
   [100, 4, 60],
-  [100, 5, 48.4],
+  [100, 5, 48],
 ])(
   ('Проверка вычисления stoned атаки при разной дистанции'),
   (attack, distance, expected) => {
-    const demon = new Daemon();
-    demon.setAttack(attack, distance);
-    demon.setStoned(true);
-    const result = demon.getStoned();
+    const demon = new Daemon(distance);
+    demon.Attack = attack;
+    demon.Stoned = true;
+    const result = demon.Attack;
     expect(expected).toBe(result);
   },
 );
@@ -43,18 +43,18 @@ test.each([
 ])(
   ('Проверка вычисления stoned атаки при разной дистанции если stoned выключен'),
   (attack, distance, expected) => {
-    const demon = new Daemon();
-    demon.setAttack(attack, distance);
-    demon.setStoned(false);
-    const result = demon.getStoned();
+    const demon = new Daemon(distance);
+    demon.Attack = attack;
+    demon.Stoned= false;
+    const result = demon.Attack;
     expect(expected).toBe(result);
   },
 );
 
 test('Проверка класса Magician', () => {
-  const mage = new Magician();
-  mage.setAttack(100, 1);
-  mage.setStoned(true);
-  const result = mage.getStoned();
+  const mage = new Magician(1);
+  mage.Attack = 100;
+  mage.Stoned = true;
+  const result = mage.Attack;
   expect(result).toBe(100);
 });
