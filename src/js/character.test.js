@@ -11,8 +11,8 @@ test.each([
   ('Проверка вычисления атаки при разной дистанции'),
   (attack, distance, expected) => {
     const demon = new Daemon(distance);
-    demon.Attack = attack;
-    const result = demon.Attack;
+    demon.attack = attack;
+    const result = demon.attack;
     expect(expected).toBe(result);
   },
 );
@@ -27,9 +27,9 @@ test.each([
   ('Проверка вычисления stoned атаки при разной дистанции'),
   (attack, distance, expected) => {
     const demon = new Daemon(distance);
-    demon.Attack = attack;
-    demon.Stoned = true;
-    const result = demon.Attack;
+    demon.attack = attack;
+    demon.stoned = true;
+    const result = demon.attack;
     expect(expected).toBe(result);
   },
 );
@@ -44,17 +44,17 @@ test.each([
   ('Проверка вычисления stoned атаки при разной дистанции если stoned выключен'),
   (attack, distance, expected) => {
     const demon = new Daemon(distance);
-    demon.Attack = attack;
-    demon.Stoned= false;
-    const result = demon.Attack;
+    demon.attack = attack;
+    demon.stoned= false;
+    const result = demon.attack;
     expect(expected).toBe(result);
   },
 );
 
 test('Проверка класса Magician', () => {
   const mage = new Magician(1);
-  mage.Attack = 100;
-  mage.Stoned = true;
-  const result = mage.Attack;
+  mage.attack = 100;
+  mage.stoned = true;
+  const result = mage.attack;
   expect(result).toBe(100);
 });

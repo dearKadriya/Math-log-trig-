@@ -3,12 +3,12 @@ class Character {
     this.distance = distance;
   }
 
-   set Attack(attack) {
+   set attack(attack) {
     this.attack = attack;
 
   }
 
-  get Attack() {
+  get attack() {
     let calculatedAttack = this.attack * ((100 - (this.distance - 1) * 10)/100);
     if (this.stoned) {
       calculatedAttack -= Math.log2(this.distance) * 5;
@@ -19,11 +19,11 @@ class Character {
 
 class Mathematical extends Character {
 
-  set Stoned(value) {
+  set stoned(value) {
     this.stoned = !!value;
   }
 
-  get Stoned() {
+  get stoned() {
     return this.stoned
   }
 }
