@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1623762790217" clover="3.2.0">
-  <project timestamp="1623762790217" name="All files">
-    <metrics statements="8" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="5" coveredmethods="4" elements="17" coveredelements="14" complexity="0" loc="8" ncloc="8" packages="1" files="1" classes="1"/>
+<coverage generated="1624359650707" clover="3.2.0">
+  <project timestamp="1624359650707" name="All files">
+    <metrics statements="11" coveredstatements="10" conditionals="4" coveredconditionals="3" methods="5" coveredmethods="4" elements="20" coveredelements="17" complexity="0" loc="11" ncloc="11" packages="1" files="1" classes="1"/>
     <file name="Character.js" path="/Users/artemkosnikov/WebstormProjects/Math-log-trig-/src/js/Character.js">
-      <metrics statements="8" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="5" coveredmethods="4"/>
-      <line num="3" count="17" type="stmt"/>
-      <line num="7" count="17" type="stmt"/>
-      <line num="12" count="17" type="stmt"/>
-      <line num="13" count="17" type="cond" truecount="2" falsecount="0"/>
-      <line num="14" count="6" type="stmt"/>
-      <line num="16" count="17" type="cond" truecount="1" falsecount="1"/>
-      <line num="23" count="11" type="stmt"/>
-      <line num="27" count="0" type="stmt"/>
+      <metrics statements="11" coveredstatements="10" conditionals="4" coveredconditionals="3" methods="5" coveredmethods="4"/>
+      <line num="3" count="18" type="stmt"/>
+      <line num="7" count="18" type="stmt"/>
+      <line num="11" count="18" type="stmt"/>
+      <line num="12" count="18" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="6" type="stmt"/>
+      <line num="15" count="18" type="cond" truecount="1" falsecount="1"/>
+      <line num="22" count="11" type="stmt"/>
+      <line num="26" count="0" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="39" count="1" type="stmt"/>
+      <line num="40" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

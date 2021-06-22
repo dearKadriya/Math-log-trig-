@@ -12,8 +12,7 @@ test.each([
   (attack, distance, expected) => {
     const demon = new Daemon(distance);
     demon.attack = attack;
-    const result = demon.attack;
-    expect(expected).toBe(result);
+    expect(expected).toBe(demon.attack);
   },
 );
 

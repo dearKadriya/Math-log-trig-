@@ -4,13 +4,12 @@ class Character {
   }
 
    set attack(attack) {
-    this.attack = attack;
-
+    this.attackValue = attack;
   }
 
   get attack() {
-    let calculatedAttack = this.attack * ((100 - (this.distance - 1) * 10)/100);
-    if (this.stoned) {
+    let calculatedAttack = this.attackValue * ((100 - (this.distance - 1) * 10)/100);
+    if (this.stonedValue) {
       calculatedAttack -= Math.log2(this.distance) * 5;
     }
     return (calculatedAttack < 0) ? 0 : Math.floor(calculatedAttack);
@@ -20,11 +19,11 @@ class Character {
 class Mathematical extends Character {
 
   set stoned(value) {
-    this.stoned = !!value;
+    this.stonedValue = !!value;
   }
 
   get stoned() {
-    return this.stoned
+    return this.stonedValue
   }
 }
 
@@ -35,10 +34,10 @@ export class Daemon extends Mathematical {
 export class Magician extends Mathematical {
 
 }
-//
-// let demon = new Daemon(2);
-// demon.Attack = 100;
-//
+
+let demon = new Daemon(2);
+demon.attack = 100;
+console.log(demon.attack)
 // demon.Stoned = true;
 // console.log(demon.Stoned)
 // console.log(demon.Stoned)
